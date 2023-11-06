@@ -34,7 +34,7 @@ export const presetPalette = definePreset((options: PaletteOptions = {}) => {
   }
 
   const colors = Object.fromEntries(Object.keys(themeColors).map(e => {
-    const colorValue = `${colorFormat}(var(${getVarName(e)}${colorFormat.length>0 ? "-"+colorFormat:""}))`;
+    const colorValue = `${colorFormat}(var(${getVarName(e)}))`;
     return [e, colorValue];
   }));
 
